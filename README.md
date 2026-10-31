@@ -26,17 +26,18 @@ The project combines my interest in **software development, infrastructure, auto
 
 | Area | What OSIRIS does | Status |
 | --- | --- | --- |
-| **Movies & TV** | Local collection with TMDB metadata, ratings, favorites, statuses, search and filtering | Implemented |
-| **Jellyfin** | Read-only synchronization for media availability and viewing progress | Implemented |
+| **Movies, TV & Animation** | Persistent TMDB-powered libraries, including a dedicated animation section | Implemented |
+| **Jellyfin** | Read-only scheduled synchronization and a dashboard of recent watches | Implemented |
 | **Server dashboard** | Linux CPU, memory, temperatures, disk and service monitoring | Implemented |
 | **Storage analysis** | Storage overview and duplicate-file analysis, without automatic deletion | Implemented |
-| **Rankings** | Personal Top 10 lists for movies, series and anime | Implemented |
+| **Rankings** | Separate Top 10 lists for films, TV series and animation | Implemented |
 | **Responsive UI** | Desktop and mobile layouts, including an iPhone-friendly navigation | Implemented |
-| **Games library** | Catalog, progress, ratings and possible Steam integration | Planned / prototype UI |
+| **Games library** | Persistent games catalog, ratings, favorites, sessions, played-time statistics and filters | Implemented |
+| **Steam & IGDB** | Read-only Steam game, playtime and achievement synchronization; IGDB search and metadata enrichment | Implemented |
 | **Projects** | Project pages, progress and task tracking | Planned / prototype UI |
 | **Connected devices** | Home Assistant, RGB lighting, 3D printer and robotics integrations | Future exploration |
 
-Statuses are based on project documentation as of **October 2026**. The application is under active development; the showcase does not provide a live public demo.
+Statuses reflect the private project's deployment notes through **31 October 2026**. The application is under active development; the showcase does not provide a live public demo.
 
 ## Design direction
 
@@ -72,11 +73,13 @@ Statuses are based on project documentation as of **October 2026**. The applicat
 
 ## Engineering challenges
 
-**Keeping personal information safe.** OSIRIS separates personal library entries from external metadata and Jellyfin observations. Synchronization must not silently overwrite personal ratings or notes.
+**Keeping personal information safe.** OSIRIS separates personal library entries from external metadata and Jellyfin / Steam observations. Synchronization is designed not to overwrite personal ratings, favorites, reviews or manual gaming sessions.
 
 **Read-only infrastructure monitoring.** A dedicated Linux agent reports system information without giving the web interface administrator privileges or direct access to Docker's control socket.
 
 **Reliable deployment.** The application uses versioned database migrations and documented backup procedures. The production service is accessible privately, rather than exposed to the public internet.
+
+**Connecting external libraries.** The games module combines a local catalog with optional read-only Steam imports and IGDB enrichment, while distinguishing third-party observations from user-managed records.
 
 **Building incrementally.** New features start as prototypes or clearly identified demo modules. Functionality is described as complete only after it is implemented and tested.
 
@@ -86,7 +89,10 @@ Statuses are based on project documentation as of **October 2026**. The applicat
 - [x] Jellyfin synchronization
 - [x] Linux monitoring and storage analysis
 - [x] Personal rankings
-- [ ] Games collection
+- [x] Persistent games collection and gaming statistics
+- [x] Steam integration with automatic read-only synchronization
+- [x] IGDB game search and metadata enrichment
+- [x] Dedicated animation collection and recent watches dashboard
 - [ ] Project tracking
 - [ ] More detailed episode tracking and export tools
 - [ ] Home automation and personal hardware integrations
