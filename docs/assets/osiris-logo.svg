@@ -1,0 +1,9 @@
+<svg width="128" height="128" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">OSIRIS logo (provisional)</title>
+  <rect x="0" y="0" width="64" height="64" rx="13" fill="#111927"/>
+  <circle cx="32" cy="32" r="23" stroke="#85ADD9" stroke-width="3.5" fill="none"/>
+  <path d="M11 32 A21 21 0 0 1 32 11" stroke="#D7E7FD" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <circle cx="32" cy="32" r="8" stroke="#85ADD9" stroke-width="2.5" fill="none"/>
+  <circle cx="32" cy="32" r="2.8" fill="#D7E7FD"/>
+  <circle cx="51" cy="19" r="4.5" fill="#85ADD9"/>
+</svg>
