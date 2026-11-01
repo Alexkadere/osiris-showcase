@@ -1,34 +1,45 @@
 # OSIRIS — Public roadmap
 
-This roadmap is a **portfolio summary**, not an exhaustive internal task tracker.
+A summary of what is shipped and where the project is heading. Order and scope may change.
 
-## Implemented and documented
+[← Back to the README](../README.md)
 
-- [x] Media catalog with persistent personal data and TMDB metadata
-- [x] Dedicated Animation section and a recent-watches dashboard
-- [x] Search, filtering, favorites and ratings
-- [x] Jellyfin integration in read-only mode
-- [x] Linux resource monitoring and storage analysis
-- [x] Separate Top 10 rankings for movies, TV series and animation
-- [x] Persistent games catalog with sessions and playing-time statistics
-- [x] Read-only Steam game, playtime and achievement synchronization
-- [x] IGDB search and game metadata enrichment
-- [x] Responsive desktop and mobile interface
-- [x] Automated testing and documented deployment workflow
+## Shipped and in daily use
 
-## Next steps
+- [x] Media catalog for films, series and animation, with TMDB metadata and personal data kept separate
+- [x] Search, filters, sorting and server-side pagination across all libraries
+- [x] Read-only Jellyfin synchronization, scheduled, with "recently watched" on the home page
+- [x] Top 10 rankings for films, series, animation and games
+- [x] Games library with sessions, playtime, statistics and a mobile command bar
+- [x] Read-only Steam synchronization (games, playtime, achievements) and IGDB metadata
+- [x] Live server monitoring and read-only storage analysis by separate host services
+- [x] Device inventory from Tailscale, with honest connection states
+- [x] Wake-on-LAN of my desktop PC, validated from a full shutdown
+- [x] File transfers between devices, validated from iPhone to PC
+- [x] iPhone home-screen app with safe areas and touch-sized controls
+- [x] Automated tests, CI, Docker deployment, backups and documented procedures
 
-- [ ] Develop a project-management module
-- [ ] Expand episode-level history and import/export features
-- [ ] Add reviewed, anonymized screenshots to the portfolio
+## Next major step: Windows agent
 
-## Longer-term explorations
+A small agent on the desktop PC, so that OSIRIS can show and act on more than its network presence:
 
-- [ ] Home automation and device control
-- [ ] 3D-printer integration
-- [ ] Robotic-arm control and telemetry
-- [ ] Additional monitoring and alerts
+- [ ] **Hardware information** on the PC's device page (processor, graphics, memory, storage, temperatures)
+- [ ] **Clean shutdown** from OSIRIS, always behind a confirmation
+- [ ] **Local RGB lighting control**, handled on the PC itself and never exposed on the network: an on/off switch first, then colors, brightness, effects and profiles
 
-Features in the last two sections are **not represented as implemented**. Scope and order may change as development continues.
+## Later
 
-*Status summary: 31 October 2026, based on the private project's deployment notes.*
+- [ ] Interface refinements for file transfers (usage bar, sorting and filters, multi-select, notifications)
+- [ ] Direct file sending to the PC through the Windows agent
+- [ ] Projects module (pages, tasks, documentation)
+- [ ] Episode-by-episode tracking for series
+- [ ] Monitoring alerts
+- [ ] Home automation (scenes, infrared devices)
+- [ ] 3D printer status and progress
+- [ ] Integration with my robotic arm
+
+## On hold
+
+- Assisted clean-up of files and download automation: paused on purpose. Any future version will require an explicit confirmation per file.
+
+*Status: 1 November 2026.*
