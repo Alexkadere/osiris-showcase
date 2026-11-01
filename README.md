@@ -60,16 +60,13 @@ It has been **in production since October 2026**, reachable only through my priv
 
 ### Devices and Wake-on-LAN
 
-<table>
-<tr>
-<td width="50%"><img src="docs/screenshots/14-devices.png" alt="Device inventory with connected, offline, unknown and agent up-to-date states" /></td>
-<td width="50%"><img src="docs/screenshots/18-wake-on-lan-detected.png" alt="Wake-on-LAN panel showing a Tailscale connection detected after the signal" /></td>
-</tr>
-<tr>
-<td><sub><b>Tailscale inventory</b>: four honest states (connected, offline, unknown, agent up to date); a stale reading is never shown as current.</sub></td>
-<td><sub><b>Remote power-on</b> after confirmation. OSIRIS reports "Tailscale connection detected", never "powered on". Tested from a full shutdown on my real PC.</sub></td>
-</tr>
-</table>
+<img src="docs/screenshots/14-devices.png" alt="Device inventory with connected, offline, unknown and agent up-to-date states" width="100%" />
+
+<sub><b>Tailscale inventory</b>: four honest states (connected, offline, unknown, agent up to date); a stale reading is never shown as current.</sub>
+
+<img src="docs/screenshots/18-wake-on-lan-detected.png" alt="Wake-on-LAN panel showing a Tailscale connection detected after the signal" width="100%" />
+
+<sub><b>Remote power-on</b> after confirmation. OSIRIS reports "Tailscale connection detected", never "powered on". Tested from a full shutdown on my real PC.</sub>
 
 ### File transfers
 

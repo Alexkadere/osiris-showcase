@@ -17,7 +17,7 @@ flowchart TB
     TS["Tailscale Serve<br/>HTTPS, tailnet only"]
 
     subgraph box["Docker container"]
-      APP["OSIRIS · Next.js<br/>pages · Server Actions · services<br/>listens on 127.0.0.1"]
+      APP["OSIRIS<br/>Next.js app<br/>127.0.0.1 only"]
     end
 
     DB[("SQLite<br/>+ backups")]
@@ -33,7 +33,7 @@ flowchart TB
     end
   end
 
-  EXT["TMDB · Jellyfin · Steam · IGDB"]
+  EXT["TMDB · Jellyfin<br/>Steam · IGDB"]
   LAN(["Local network"])
 
   PC & PH --> TS --> APP

@@ -5,7 +5,7 @@ Every screenshot was taken on **1 November 2026** from the real application, run
 - **demo mode** (marked "Données de démonstration" in the interface), or
 - a **local instance with a temporary database** and **fictitious** titles, games, devices and files.
 
-No screenshot comes from the production server or contains a real address, device name, library title or personal file. The interface is in French; desktop shots are 1440 × 900, iPhone shots 393 × 852 (rendered at 2×).
+No screenshot comes from the production server or contains a real address, device name, library title or personal file. The interface is in French; desktop shots are 1440 px wide (two are cropped to their content), iPhone shots 393 × 852 (rendered at 2×).
 
 [← Back to the README](../README.md)
 
